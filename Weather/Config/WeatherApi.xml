@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root Type = "ApiInfo">
+	<Link Link = "http://restapi.amap.com/v3/weather/weatherInfo?"/>
+	<ApiKey ApiKey = "8b7fa0f3304b71426c27eaaaa15622d5"/>
+	<CityCode CityCode = "110000"/>
+	<Extensions Extensions = "base"/>
+</Root>
+

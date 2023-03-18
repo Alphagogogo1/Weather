@@ -1,0 +1,244 @@
+/****QWidget****/
+QWidget
+{
+	color:white;	/*所有控件字体颜色为白色*/
+	background-color:#4b84ff;	/*所有控件背景颜色*/
+	background:transparent;		/*所有控件效果透明*/
+	font-family:KaiTi;	/*所有控件字体为楷体*/
+	font-size:18px;	/*所有控件字体大小*/
+}
+
+/**********主窗口**********/
+/*日间背景*/
+QWidget[MAIN_WINDOW = true][IS_DAY = true]
+{
+	border-image:url(./StyleTheme/Theme/bg_day.png); /*添加背景图片*/
+}
+/*夜间背景*/
+QWidget[MAIN_WINDOW = true][IS_DAY = false]
+{
+	border-image:url(./StyleTheme/Theme/bg_night.png);	/*添加背景图片*/
+}
+
+QWidget[TITLE_WGT = true]
+{
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+}
+
+/****QLabel****/
+/*天气预报图标*/
+QLabel[ICON_LAB = true]
+{
+	border-image:url(./StyleTheme/Base/tqyb.png);	/*添加标签背景图片*/
+}
+
+/*城市标签*/
+QLabel[CITY = true]
+{
+	font-weight:bold;	/*粗体*/
+	font-size:20px;		/*字体大小*/
+}	
+
+/*天气标签图标*/
+QLabel[WEATHER = "晴"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-qing.png);
+}
+
+QLabel[WEATHER = "阴"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-yin.png);
+}
+
+QLabel[WEATHER = "多云"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-duoyun.png);
+}
+
+QLabel[WEATHER = "小雨"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-xiaoyu.png);
+}
+
+QLabel[WEATHER = "中雨"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-zhongyu.png);
+}
+
+QLabel[WEATHER = "大雨"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-dayu.png);
+}
+
+QLabel[WEATHER = "暴雨"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-baoyu.png);
+}
+
+QLabel[WEATHER = "大暴雨"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-dabaoyu.png);
+}
+
+QLabel[WEATHER = "小雪"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-xiaoxue.png);
+}
+
+QLabel[WEATHER = "中雪"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-zhongxue.png);
+}
+
+QLabel[WEATHER = "大雪"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-daxue.png);
+}
+
+QLabel[WEATHER = "暴雪"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-baoxue.png);
+}
+
+QLabel[WEATHER = "雷阵雨"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-leiyu.png);
+}
+
+QLabel[WEATHER = "浮尘"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-shachen.png);
+}
+
+QLabel[WEATHER = "霜"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-shaung.png);
+}
+
+QLabel[WEATHER = "雾"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-wu.png);
+}
+
+QLabel[WEATHER = "扬沙"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-yangsha.png);
+}
+
+QLabel[WEATHER = "雨夹雪"]
+{
+	border-image:url(./StyleTheme/Theme/tianqi-yujiaxue.png);
+}
+
+/****QPushButton****/
+/*切换按钮*/
+QPushButton[SWITCH_MODE_BTN = true]
+{
+	background-color: #808080;	/*切换按钮背景颜色*/
+	border: 2px solid #ffffff;	/*切换按钮边框样式*/
+	border-radius: 5px;	/*切换按钮边角圆润*/
+}
+
+/*切换按钮悬浮*/
+QPushButton[SWITCH_MODE_BTN = true]:hover
+{
+	background-color: #a2a2a2;	/*悬浮背景色*/
+}
+
+/*关闭按钮*/
+QPushButton[CLOSE_BTN = true]
+{
+	width:24px;
+	height:24px;
+	border-image:url(./StyleTheme/Base/close.png);	/*关闭按钮背景*/
+}	
+
+/*关闭按钮悬浮*/
+QPushButton[CLOSE_BTN = true]:hover
+{
+	border-image:url(./StyleTheme/Base/close_hover.png);	/*关闭按钮悬浮背景*/
+}
+
+/*最小化按钮*/
+QPushButton[MIN_BTN = true]
+{
+	width:24px;
+	height:24px;
+	border-image:url(./StyleTheme/Base/min.png);	/*最小化按钮背景*/
+}	
+
+/*最小化按钮悬浮*/
+QPushButton[MIN_BTN = true]:hover
+{
+	border-image:url(./StyleTheme/Base/min_hover.png);	/*最小化按钮悬浮背景*/
+}
+
+
+/****QComboBox****/
+/*下拉框*/
+QComboBox
+{
+	border: 1px solid #ffffff; /*下拉框样式*/
+	border-radius:3px;	/*下拉框边角圆润*/
+}
+
+/*点击下拉框的样式*/
+QComboBox:on
+{
+	background-color:rgba(172, 179, 211); /*点击后的背景颜色*/
+	border:1px solid blue;
+}
+
+/*下拉框下拉按钮的边框*/
+QComboBox::drop-down 
+{
+	border:none;	/*没有边框*/
+}
+
+QComboBox::down-arrow 
+{
+	width: 9px;
+	height: 9px;
+ 	image: url(./StyleTheme/Base/arrow_down2.png);	/*下拉按钮背景图片（未点击）*/
+}
+
+QComboBox::down-arrow:on 
+{
+	image: url(./StyleTheme/Base/arrow_up2.png);	/*下拉按钮背景图片（已点击）*/
+}
+
+/*下拉列表的样式*/
+QComboBox QAbstractItemView 
+{
+    background-color: gray; /*下拉列表的背景色*/
+}
+
+/****QMenu****/
+QMenu 
+{
+	border: 1px solid #CCCCCC; /* 边框宽度为1px，颜色为#CCCCCC */
+	border-radius: 3px; /* 边框圆角 */
+	background-color: #FAFAFC; /* 背景颜色 */
+}
+
+QMenu::item 
+{ /* 菜单子控件item，为菜单项在default的状态 */
+	border: 0px solid transparent;
+	background-color: transparent;
+	color: black; /* 文本颜色 */
+	font-size: 18px;
+	min-height: 25px;
+	padding:5px 5px 5px 5px;
+}
+
+QMenu::item:selected 
+{ /* 为菜单项在selected的状态 */
+	background-color: #EBEBEB;
+}
+
+/****QMessageBox****/
+QMessageBox
+{
+	background-color:skyblue;
+}
